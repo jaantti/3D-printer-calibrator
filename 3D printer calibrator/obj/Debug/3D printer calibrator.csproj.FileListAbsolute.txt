@@ -1,0 +1,9 @@
+C:\git\private\3D printer calibrator\3D printer calibrator\bin\Debug\3D printer calibrator.exe.config
+C:\git\private\3D printer calibrator\3D printer calibrator\bin\Debug\3D printer calibrator.exe
+C:\git\private\3D printer calibrator\3D printer calibrator\bin\Debug\3D printer calibrator.pdb
+C:\git\private\3D printer calibrator\3D printer calibrator\obj\Debug\3D printer calibrator.csprojResolveAssemblyReference.cache
+C:\git\private\3D printer calibrator\3D printer calibrator\obj\Debug\_3D_printer_calibrator.Form1.resources
+C:\git\private\3D printer calibrator\3D printer calibrator\obj\Debug\_3D_printer_calibrator.Properties.Resources.resources
+C:\git\private\3D printer calibrator\3D printer calibrator\obj\Debug\3D printer calibrator.csproj.GenerateResource.Cache
+C:\git\private\3D printer calibrator\3D printer calibrator\obj\Debug\3D printer calibrator.exe
+C:\git\private\3D printer calibrator\3D printer calibrator\obj\Debug\3D printer calibrator.pdb
