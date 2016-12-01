@@ -10,13 +10,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _3D_printer_calibrator {
-    public partial class Form1 : Form {
+    public partial class Form1 : Form
+    {
+        private List<PrinterClass> printers;
+
         public Form1() {
+            printers = new List<PrinterClass>();
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e) {
+            printers.Add(new Cartesio());
+            printers.Add(new TAZ6Cura());
+            printers.Add(new TAZ6S3D());
 
+            foreach (var printer in printers)
+            {
+                printerBox.Items.Add(printer.name);
+            }
+            printerBox.SelectedIndex = 0;
         }
 
         private void calculate_Click(object sender, EventArgs e)
@@ -39,14 +51,11 @@ namespace _3D_printer_calibrator {
                 return;
             }
 
-            float deltaX = numbers[2] - numbers[3];
-            float deltaY = numbers[4] - numbers[5];
+            var printer = printers[printerBox.SelectedIndex];
+            var newValues = printer.calculateOffsets(numbers);
 
-            float newXValue = numbers[0] + deltaX/2.0f;
-            float newYValue = numbers[1] + deltaY/2.0f;
-
-            newX.Text = "" + newXValue;
-            NewY.Text = "" + newYValue;
+            newX.Text = $"{newValues.Item1:F3}";
+            newY.Text = $"{newValues.Item2:F3}";
         }
 
         private string parseTextbox(TextBox box, out float value)
